@@ -24,9 +24,8 @@ Route.get('/', async () => {
   return { hello: 'world' }
 })
 
-Route.get('/aula', async () => {
-  return { hello: 'aula' }
-})
+Route.post("/register", "AuthController.register")
+Route.post("/login", "AuthController.login")
 
 // Controler : classes chamadas pela rota que centraliza o processamento do código solicitado
 // ORM (mapeamento objeto relacional): enxerga minha tabela. sua função é manter a tabela dentro do objeto que criei
